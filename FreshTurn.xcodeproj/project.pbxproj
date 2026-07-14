@@ -1,0 +1,549 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2853340BBCEB86F5FDADB1B0 /* ReceiptCaptureComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E561B88B58736A8E71A9B5 /* ReceiptCaptureComponents.swift */; };
+		3179F3DE725EE1D58C51A138 /* ReceiptImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56F34C75590207792AA19BA /* ReceiptImagePicker.swift */; };
+		332013B1BD2EADF0E65479E9 /* RescueLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD27F9412431FBA262D80D2 /* RescueLogic.swift */; };
+		36013529872C263557917985 /* RescueHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181A9B1875CA05C2846C02EF /* RescueHistoryView.swift */; };
+		4BA75B09430FB9D187FA9CDA /* FreshTurnTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D4622EC2A9BF73F72820CB /* FreshTurnTheme.swift */; };
+		75BA8B66F942AE0FF615E459 /* RescueRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F2C279AE2E76DA30CBB66D /* RescueRepository.swift */; };
+		882522BD0925995F80DD44E7 /* ReceiptTextPrivacy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F49DECE3B93E06441F997F /* ReceiptTextPrivacy.swift */; };
+		91018F8A5851B5E07297277B /* RescueModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C909D86E9B662C2857292161 /* RescueModels.swift */; };
+		9995028777D1D470B64AF7F6 /* ItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E1ABE46733EE50474EE017 /* ItemDetailView.swift */; };
+		9DBAB69FEE3BD08D092D52A5 /* AppRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1836DEF8B8303853950E45D /* AppRootView.swift */; };
+		BB2C7EE00B9C71AC90F62324 /* FreshTurnCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1B16719E8FAD82F1BEB4172B /* FreshTurnCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C4B1EB7F8E58E66932A62104 /* ReceiptOCRService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5725F49E0CC10638C7283B5E /* ReceiptOCRService.swift */; };
+		CB80DC039CC8B8CECBDF7BA8 /* NewRescueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BF8D2F6FE80F98807D72CD /* NewRescueView.swift */; };
+		CE36531A10B3CB28DEC3A69C /* FreshTurnCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B16719E8FAD82F1BEB4172B /* FreshTurnCore.framework */; };
+		D05E2CC9285C7C31B4BE82D8 /* PrivacySettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1FC666C5D8BB6A36770582 /* PrivacySettingsView.swift */; };
+		D8813C79B59026ABCDC7BB8D /* KimiReceiptParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2898BD3F942124BC05992200 /* KimiReceiptParser.swift */; };
+		DD7B7357F8F7D631958B7ED5 /* FreshTurnApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B17092EEF75209DEF8C395E /* FreshTurnApp.swift */; };
+		E87B43AFCA38BB360CCDE192 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 94EE812721250A6A6718D16A /* PrivacyInfo.xcprivacy */; };
+		F429DBCA20E65F8524919A52 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C088413D691A341EDBB6E1 /* TodayView.swift */; };
+		F85E93AB9A55F1BA3CF09C4E /* BeforeYouShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDB92D8A79D903AB3A06B50 /* BeforeYouShopView.swift */; };
+		FD800B88D7DA19D946401597 /* CandidateReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB9275C79CDD7D34A540796 /* CandidateReview.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6E34C3A32B755E4F0E91B691 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DBF19C919EA9F6500BAED4D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7CE657180939645A51C5F1E3;
+			remoteInfo = FreshTurnCore;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4D69217A87C05BF4C2B034E1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BB2C7EE00B9C71AC90F62324 /* FreshTurnCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		181A9B1875CA05C2846C02EF /* RescueHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RescueHistoryView.swift; sourceTree = "<group>"; };
+		1B16719E8FAD82F1BEB4172B /* FreshTurnCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FreshTurnCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2898BD3F942124BC05992200 /* KimiReceiptParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KimiReceiptParser.swift; sourceTree = "<group>"; };
+		4FDB92D8A79D903AB3A06B50 /* BeforeYouShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeforeYouShopView.swift; sourceTree = "<group>"; };
+		56D4622EC2A9BF73F72820CB /* FreshTurnTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreshTurnTheme.swift; sourceTree = "<group>"; };
+		5725F49E0CC10638C7283B5E /* ReceiptOCRService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptOCRService.swift; sourceTree = "<group>"; };
+		6B17092EEF75209DEF8C395E /* FreshTurnApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreshTurnApp.swift; sourceTree = "<group>"; };
+		6B1FC666C5D8BB6A36770582 /* PrivacySettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacySettingsView.swift; sourceTree = "<group>"; };
+		94E1ABE46733EE50474EE017 /* ItemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailView.swift; sourceTree = "<group>"; };
+		94EE812721250A6A6718D16A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		9FD27F9412431FBA262D80D2 /* RescueLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RescueLogic.swift; sourceTree = "<group>"; };
+		A1836DEF8B8303853950E45D /* AppRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootView.swift; sourceTree = "<group>"; };
+		A2E561B88B58736A8E71A9B5 /* ReceiptCaptureComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptCaptureComponents.swift; sourceTree = "<group>"; };
+		B6F49DECE3B93E06441F997F /* ReceiptTextPrivacy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptTextPrivacy.swift; sourceTree = "<group>"; };
+		B7F2C279AE2E76DA30CBB66D /* RescueRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RescueRepository.swift; sourceTree = "<group>"; };
+		BF28F5612679B25EC4C7862C /* FreshTurn.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = FreshTurn.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5C088413D691A341EDBB6E1 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
+		C909D86E9B662C2857292161 /* RescueModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RescueModels.swift; sourceTree = "<group>"; };
+		D6BF8D2F6FE80F98807D72CD /* NewRescueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRescueView.swift; sourceTree = "<group>"; };
+		F56F34C75590207792AA19BA /* ReceiptImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptImagePicker.swift; sourceTree = "<group>"; };
+		F597B53BFBF5414EAD100D4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		FDB9275C79CDD7D34A540796 /* CandidateReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateReview.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3D0131283B9B3B2511C2C425 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE36531A10B3CB28DEC3A69C /* FreshTurnCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		11435C656B851B30DC46EC1F /* FreshTurnApp */ = {
+			isa = PBXGroup;
+			children = (
+				A1836DEF8B8303853950E45D /* AppRootView.swift */,
+				6B17092EEF75209DEF8C395E /* FreshTurnApp.swift */,
+				589AA2CA671A641F5341A270 /* Features */,
+				F28529F18388CE3FEAFB8ABF /* Resources */,
+				ED65E54EF629FD22FFB581D9 /* Services */,
+				8DFCEAE1F4CEF58F4916B812 /* Support */,
+			);
+			path = FreshTurnApp;
+			sourceTree = "<group>";
+		};
+		1521A3F7B78A4F16D0F3EBC2 /* FreshTurnCore */ = {
+			isa = PBXGroup;
+			children = (
+				B6F49DECE3B93E06441F997F /* ReceiptTextPrivacy.swift */,
+				9FD27F9412431FBA262D80D2 /* RescueLogic.swift */,
+				C909D86E9B662C2857292161 /* RescueModels.swift */,
+				B7F2C279AE2E76DA30CBB66D /* RescueRepository.swift */,
+			);
+			name = FreshTurnCore;
+			path = Sources/FreshTurnCore;
+			sourceTree = "<group>";
+		};
+		23B9539ADA8CCF6B1023A569 = {
+			isa = PBXGroup;
+			children = (
+				11435C656B851B30DC46EC1F /* FreshTurnApp */,
+				1521A3F7B78A4F16D0F3EBC2 /* FreshTurnCore */,
+				C3EE71714D966F904DC9CA60 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		589AA2CA671A641F5341A270 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				4FDB92D8A79D903AB3A06B50 /* BeforeYouShopView.swift */,
+				FDB9275C79CDD7D34A540796 /* CandidateReview.swift */,
+				94E1ABE46733EE50474EE017 /* ItemDetailView.swift */,
+				D6BF8D2F6FE80F98807D72CD /* NewRescueView.swift */,
+				6B1FC666C5D8BB6A36770582 /* PrivacySettingsView.swift */,
+				A2E561B88B58736A8E71A9B5 /* ReceiptCaptureComponents.swift */,
+				181A9B1875CA05C2846C02EF /* RescueHistoryView.swift */,
+				C5C088413D691A341EDBB6E1 /* TodayView.swift */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		8DFCEAE1F4CEF58F4916B812 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				56D4622EC2A9BF73F72820CB /* FreshTurnTheme.swift */,
+				F56F34C75590207792AA19BA /* ReceiptImagePicker.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		C3EE71714D966F904DC9CA60 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BF28F5612679B25EC4C7862C /* FreshTurn.app */,
+				1B16719E8FAD82F1BEB4172B /* FreshTurnCore.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ED65E54EF629FD22FFB581D9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2898BD3F942124BC05992200 /* KimiReceiptParser.swift */,
+				5725F49E0CC10638C7283B5E /* ReceiptOCRService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F28529F18388CE3FEAFB8ABF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F597B53BFBF5414EAD100D4B /* Info.plist */,
+				94EE812721250A6A6718D16A /* PrivacyInfo.xcprivacy */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7CE657180939645A51C5F1E3 /* FreshTurnCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B0424D42893D93C27B04D46 /* Build configuration list for PBXNativeTarget "FreshTurnCore" */;
+			buildPhases = (
+				AFF81666447FC226EB9AE7ED /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FreshTurnCore;
+			packageProductDependencies = (
+			);
+			productName = FreshTurnCore;
+			productReference = 1B16719E8FAD82F1BEB4172B /* FreshTurnCore.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		945B17F75174DD65E55AE1CE /* FreshTurn */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E8E5A9B7C478F964F2ED8B74 /* Build configuration list for PBXNativeTarget "FreshTurn" */;
+			buildPhases = (
+				064C47DD7B83CEFB14637C47 /* Sources */,
+				F01850708F5F0AF33C3A35E9 /* Resources */,
+				3D0131283B9B3B2511C2C425 /* Frameworks */,
+				4D69217A87C05BF4C2B034E1 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B95FE695117C1A371FC85E82 /* PBXTargetDependency */,
+			);
+			name = FreshTurn;
+			packageProductDependencies = (
+			);
+			productName = FreshTurn;
+			productReference = BF28F5612679B25EC4C7862C /* FreshTurn.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4DBF19C919EA9F6500BAED4D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					7CE657180939645A51C5F1E3 = {
+						DevelopmentTeam = "";
+					};
+					945B17F75174DD65E55AE1CE = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 7A74CBACA0265CD378F7726F /* Build configuration list for PBXProject "FreshTurn" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 23B9539ADA8CCF6B1023A569;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = C3EE71714D966F904DC9CA60 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				945B17F75174DD65E55AE1CE /* FreshTurn */,
+				7CE657180939645A51C5F1E3 /* FreshTurnCore */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F01850708F5F0AF33C3A35E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E87B43AFCA38BB360CCDE192 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		064C47DD7B83CEFB14637C47 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DBAB69FEE3BD08D092D52A5 /* AppRootView.swift in Sources */,
+				F85E93AB9A55F1BA3CF09C4E /* BeforeYouShopView.swift in Sources */,
+				FD800B88D7DA19D946401597 /* CandidateReview.swift in Sources */,
+				DD7B7357F8F7D631958B7ED5 /* FreshTurnApp.swift in Sources */,
+				4BA75B09430FB9D187FA9CDA /* FreshTurnTheme.swift in Sources */,
+				9995028777D1D470B64AF7F6 /* ItemDetailView.swift in Sources */,
+				D8813C79B59026ABCDC7BB8D /* KimiReceiptParser.swift in Sources */,
+				CB80DC039CC8B8CECBDF7BA8 /* NewRescueView.swift in Sources */,
+				D05E2CC9285C7C31B4BE82D8 /* PrivacySettingsView.swift in Sources */,
+				2853340BBCEB86F5FDADB1B0 /* ReceiptCaptureComponents.swift in Sources */,
+				3179F3DE725EE1D58C51A138 /* ReceiptImagePicker.swift in Sources */,
+				C4B1EB7F8E58E66932A62104 /* ReceiptOCRService.swift in Sources */,
+				36013529872C263557917985 /* RescueHistoryView.swift in Sources */,
+				F429DBCA20E65F8524919A52 /* TodayView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFF81666447FC226EB9AE7ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				882522BD0925995F80DD44E7 /* ReceiptTextPrivacy.swift in Sources */,
+				332013B1BD2EADF0E65479E9 /* RescueLogic.swift in Sources */,
+				91018F8A5851B5E07297277B /* RescueModels.swift in Sources */,
+				75BA8B66F942AE0FF615E459 /* RescueRepository.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B95FE695117C1A371FC85E82 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7CE657180939645A51C5F1E3 /* FreshTurnCore */;
+			targetProxy = 6E34C3A32B755E4F0E91B691 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		13651D572F02934033CAEDE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FreshTurnApp/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.freshturn.app;
+				PRODUCT_NAME = FreshTurn;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		26C500E4F03FF995E9264715 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		2A2217DA2D1729B29DE231F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.freshturn.core;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		302A97F222B7823A4BDA2E8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FreshTurnApp/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.freshturn.app;
+				PRODUCT_NAME = FreshTurn;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9FC750C4E6F8DBF3CD36F714 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F0CA66EF4FDB20C13792E7B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.freshturn.core;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3B0424D42893D93C27B04D46 /* Build configuration list for PBXNativeTarget "FreshTurnCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0CA66EF4FDB20C13792E7B2 /* Debug */,
+				2A2217DA2D1729B29DE231F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7A74CBACA0265CD378F7726F /* Build configuration list for PBXProject "FreshTurn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FC750C4E6F8DBF3CD36F714 /* Debug */,
+				26C500E4F03FF995E9264715 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E8E5A9B7C478F964F2ED8B74 /* Build configuration list for PBXNativeTarget "FreshTurn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13651D572F02934033CAEDE7 /* Debug */,
+				302A97F222B7823A4BDA2E8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4DBF19C919EA9F6500BAED4D /* Project object */;
+}

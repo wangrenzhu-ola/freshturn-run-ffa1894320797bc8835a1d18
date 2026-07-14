@@ -64,6 +64,14 @@ final class RescueCoreTests: XCTestCase {
         XCTAssertEqual(storedDate.timeIntervalSince1970, tomorrow.timeIntervalSince1970, accuracy: 1)
     }
 
+    func testReceiptPreviewRemovesPaymentAndLoyaltyLinesButKeepsGroceries() {
+        let text = "ORGANIC SPINACH\nVISA 4242\nLOYALTY MEMBER ID 9988\nGREEK YOGURT\n123456789012"
+
+        let redacted = ReceiptTextPrivacy.redactedPreview(from: text)
+
+        XCTAssertEqual(redacted, "ORGANIC SPINACH\nGREEK YOGURT")
+    }
+
     private func temporaryFileURL() -> URL {
         FileManager.default.temporaryDirectory
             .appendingPathComponent(UUID().uuidString)
