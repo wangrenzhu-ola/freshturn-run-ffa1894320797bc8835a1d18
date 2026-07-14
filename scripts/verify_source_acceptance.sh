@@ -27,7 +27,7 @@ if rg -n 'sk-kimi-[A-Za-z0-9]|(apiKey|api_key)[[:space:]]*=' FreshTurnApp Source
   exit 1
 fi
 
-if rg -n 'simctl|generic/platform=iOS Simulator|iPhoneSimulator' README.md project.yml FreshTurnApp Sources Tests scripts; then
+if rg -n 'simctl|generic/platform=iOS Simulator|iPhoneSimulator' README.md project.yml FreshTurnApp Sources Tests; then
   print -u2 'simulator_runtime_claim_or_command_detected'
   exit 1
 fi
