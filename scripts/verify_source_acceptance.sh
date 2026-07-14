@@ -17,10 +17,15 @@ rg -q 'Retry Parsing' FreshTurnApp/Features/ReceiptCaptureComponents.swift
 rg -q 'Continue Manually' FreshTurnApp/Features/ReceiptCaptureComponents.swift
 rg -q 'Cancel Without Saving' FreshTurnApp/Features/ReceiptCaptureComponents.swift
 rg -q 'Save Rescue' FreshTurnApp/Features/CandidateReview.swift
+rg -q 'Parser abstained' Sources/FreshTurnCore/RescueModels.swift
+rg -Fq 'onChange(of: candidate.storageLocation)' FreshTurnApp/Features/CandidateReview.swift
+rg -Fq 'onChange(of: candidate.useFirstDate)' FreshTurnApp/Features/CandidateReview.swift
 rg -q 'not food-safety or edibility advice' FreshTurnApp/Features/CandidateReview.swift
 rg -q 'prefix\(max\(0, limit\)\)' Sources/FreshTurnCore/RescueLogic.swift
 rg -q 'Data\(contentsOf: fileURL\)' Sources/FreshTurnCore/RescueRepository.swift
 rg -q 'No account · No tracking · No receipt image upload' FreshTurnApp/Features/PrivacySettingsView.swift
+rg -q '<string>FreshTurn uses the camera only to recognize text on your grocery receipt on this device.</string>' FreshTurnApp/Resources/Info.plist
+rg -q '<string>FreshTurn imports a receipt image only for on-device text recognition.</string>' FreshTurnApp/Resources/Info.plist
 
 if rg -n 'sk-kimi-[A-Za-z0-9]|(apiKey|api_key)[[:space:]]*=' FreshTurnApp Sources Tests; then
   print -u2 'embedded_secret_pattern_detected'

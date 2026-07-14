@@ -25,7 +25,7 @@ public enum CandidateConfidence: String, Codable, CaseIterable {
         switch self {
         case .high: return "High confidence"
         case .review: return "Please review"
-        case .abstained: return "Needs a name"
+        case .abstained: return "Parser abstained"
         }
     }
 }
@@ -144,4 +144,3 @@ public struct RescueSprint: Identifiable, Codable, Equatable {
         !items.isEmpty && resolvedCount == items.count
     }
 }
-

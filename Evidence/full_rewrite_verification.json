@@ -1,0 +1,38 @@
+{
+  "schema_version": "appfactory.package_full_rewrite_verification.v1",
+  "run_id": "run-ffa1894320797bc8835a1d18",
+  "verification_mode": "source_verification_only",
+  "acceptance_check_count": 9,
+  "checks": [
+    {
+      "kind": "xcode_source_build",
+      "command": "xcodebuild -project FreshTurn.xcodeproj -scheme FreshTurn -configuration Debug -destination generic/platform=iOS -derivedDataPath .appfactory-full-rewrite-derived CODE_SIGNING_ALLOWED=NO build",
+      "status": "PASS",
+      "signal": "** BUILD SUCCEEDED **",
+      "evidence_ref": "Evidence/full_rewrite_xcode_build.log",
+      "evidence_sha256": "b5d61f0a974a8cb804c457f232f538a5931d1572132bfcb7eaf47b7baa5b61f3"
+    },
+    {
+      "kind": "source_unit_tests",
+      "command": "swift test --scratch-path .appfactory-full-rewrite-swift",
+      "status": "PASS",
+      "signal": "Executed 6 tests, with 0 failures",
+      "evidence_ref": "Evidence/full_rewrite_swift_test.log",
+      "evidence_sha256": "a6ecf6bedb4483347a8550426be7a8e4d2831217a211777c714aaeef3f9890e9"
+    },
+    {
+      "kind": "full_acceptance_source_audit",
+      "command": "scripts/verify_source_acceptance.sh",
+      "status": "PASS",
+      "signal": "SOURCE_ACCEPTANCE_AUDIT_PASS",
+      "evidence_ref": "Evidence/full_rewrite_source_audit.log",
+      "evidence_sha256": "6e9232e1c504d3f419821507aa8f1f6c2fa7ff5eb2633adfcdf1bc74e764826f"
+    }
+  ],
+  "simulator_runtime": {
+    "required": false,
+    "status": "SKIPPED",
+    "accepted": false,
+    "claimed_pass": false
+  }
+}

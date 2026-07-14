@@ -36,18 +36,52 @@ final class RescueCoreTests: XCTestCase {
     func testSavedEditReopensFromDiskWithoutSampleContent() {
         let fileURL = temporaryFileURL()
         let repository = RescueRepository(fileURL: fileURL)
-        let candidate = ReceiptCandidate(name: "Peaches", sourceLine: "PCH 2LB")
-        repository.addSprint(receiptLabel: "Grocery receipt", candidates: [candidate])
+        let planningDate = Date(timeIntervalSince1970: 1_800_000_000)
+        let peaches = ReceiptCandidate(name: "Peaches", sourceLine: "PCH 2LB")
+        let yogurt = ReceiptCandidate(name: "Yogurt", sourceLine: "GRK YGT")
+        repository.addSprint(receiptLabel: "Grocery receipt", candidates: [peaches, yogurt])
         var edited = try! XCTUnwrap(repository.sprints.first?.items.first)
         edited.name = "White peaches"
         edited.storageLocation = .counter
+        edited.useFirstDate = planningDate
+        edited.correctionState = .corrected
         repository.updateItem(edited)
+        repository.resolve(itemID: yogurt.id, as: .used, at: planningDate)
 
         let reopened = RescueRepository(fileURL: fileURL)
 
         XCTAssertEqual(reopened.sprints.first?.items.first?.name, "White peaches")
         XCTAssertEqual(reopened.sprints.first?.items.first?.storageLocation, .counter)
+        XCTAssertEqual(reopened.sprints.first?.items.first?.useFirstDate, planningDate)
+        XCTAssertEqual(reopened.sprints.first?.items.first?.correctionState, .corrected)
+        XCTAssertEqual(reopened.sprints.first?.items.last?.resolution, .used)
+        XCTAssertEqual(reopened.sprints.first?.items.last?.resolvedAt, planningDate)
+        XCTAssertEqual(reopened.sprints.first?.resolvedCount, 1)
         XCTAssertEqual(reopened.sprints.count, 1)
+    }
+
+    func testReviewedStorageAndPlanningDateAreSavedExactly() {
+        let fileURL = temporaryFileURL()
+        let repository = RescueRepository(fileURL: fileURL)
+        let planningDate = Date(timeIntervalSince1970: 1_850_000_000)
+        let reviewed = ReceiptCandidate(
+            name: "Baby spinach",
+            sourceLine: "ORG SPIN",
+            category: "Produce",
+            confidence: .high,
+            storageLocation: .freezer,
+            useFirstDate: planningDate,
+            correctionState: .corrected
+        )
+
+        repository.addSprint(receiptLabel: "Reviewed receipt", candidates: [reviewed])
+
+        let saved = try! XCTUnwrap(repository.sprints.first?.items.first)
+        XCTAssertEqual(saved.name, reviewed.name)
+        XCTAssertEqual(saved.sourceLine, reviewed.sourceLine)
+        XCTAssertEqual(saved.storageLocation, reviewed.storageLocation)
+        XCTAssertEqual(saved.useFirstDate, reviewed.useFirstDate)
+        XCTAssertEqual(saved.correctionState, reviewed.correctionState)
     }
 
     func testStillHereKeepsItemUnresolvedAndMovesPlanningDate() {

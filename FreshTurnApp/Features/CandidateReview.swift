@@ -124,8 +124,14 @@ private struct CandidateEditor: View {
                 }
             }
             .pickerStyle(SegmentedPickerStyle())
+            .onChange(of: candidate.storageLocation) { _ in
+                markCorrected()
+            }
             DatePicker("Use-first plan", selection: $candidate.useFirstDate, displayedComponents: .date)
                 .font(.subheadline)
+                .onChange(of: candidate.useFirstDate) { _ in
+                    markCorrected()
+                }
         }
         .padding(16)
         .background(FreshTurnTheme.paper)
@@ -133,8 +139,12 @@ private struct CandidateEditor: View {
     }
 
     private func markCorrected(_ isEditing: Bool) {
-        if isEditing && candidate.correctionState == .confirmed {
-            candidate.correctionState = .corrected
-        }
+        guard isEditing else { return }
+        markCorrected()
+    }
+
+    private func markCorrected() {
+        guard candidate.correctionState == .confirmed else { return }
+        candidate.correctionState = .corrected
     }
 }
