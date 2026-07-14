@@ -1,0 +1,13 @@
+{
+  "schema_version": "appfactory.ios_package_manifest.v1",
+  "app_name": "FreshTurn",
+  "platform": "iOS",
+  "minimum_deployment_target": "14.0",
+  "swift_language_version": "5",
+  "xcode_project": "FreshTurn.xcodeproj",
+  "scheme": "FreshTurn",
+  "persistence": "local_json",
+  "cloud_boundary": "opt_in_extracted_text_to_secret_safe_proxy",
+  "sample_data_only": false,
+  "static_ui_only": false
+}

@@ -1,0 +1,57 @@
+name: FreshTurn
+options:
+  minimumXcodeGenVersion: 2.40.0
+  deploymentTarget:
+    iOS: "14.0"
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    IPHONEOS_DEPLOYMENT_TARGET: "14.0"
+    DEVELOPMENT_TEAM: ""
+targets:
+  FreshTurnCore:
+    type: framework
+    platform: iOS
+    sources:
+      - Sources/FreshTurnCore
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.freshturn.core
+        DEFINES_MODULE: YES
+        SKIP_INSTALL: YES
+  FreshTurn:
+    type: application
+    platform: iOS
+    sources:
+      - FreshTurnApp
+    dependencies:
+      - target: FreshTurnCore
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.freshturn.app
+        PRODUCT_NAME: FreshTurn
+        TARGETED_DEVICE_FAMILY: "1,2"
+        CODE_SIGN_STYLE: Automatic
+        ASSETCATALOG_COMPILER_APPICON_NAME: ""
+    info:
+      path: FreshTurnApp/Resources/Info.plist
+      properties:
+        CFBundleDisplayName: FreshTurn
+        CFBundleShortVersionString: "1.0"
+        CFBundleVersion: "1"
+        UILaunchScreen: {}
+        NSCameraUsageDescription: FreshTurn uses the camera only to recognize text on your grocery receipt on this device.
+        NSPhotoLibraryUsageDescription: FreshTurn imports a receipt image only for on-device text recognition.
+        ITSAppUsesNonExemptEncryption: false
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: false
+schemes:
+  FreshTurn:
+    build:
+      targets:
+        FreshTurn: all
+    run:
+      config: Debug
+    archive:
+      config: Release
+
