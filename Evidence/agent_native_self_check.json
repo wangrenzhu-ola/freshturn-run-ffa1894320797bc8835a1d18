@@ -1,0 +1,58 @@
+{
+  "schema_version": "appfactory.rough_app_self_check.v1",
+  "run_id": "run-ffa1894320797bc8835a1d18",
+  "implementation_mode": "agent_native_build_loop",
+  "generator_template_substitution_allowed": false,
+  "normal_mode_preflight": "Ponytail disabled by job contract and runtime disabled_skill_refs",
+  "swift_language_version": "5",
+  "minimum_deployment_target": "14.0",
+  "implemented_with_real_interaction": true,
+  "persistence_implemented": true,
+  "sample_data_only": false,
+  "static_ui_only": false,
+  "applied_skill_ids": [
+    "factory-rough-app-builder",
+    "appfactory-runtime-io",
+    "build-ios-apps",
+    "test-xcode",
+    "swiftui-ui-patterns",
+    "swiftui-view-refactor",
+    "taste-skill",
+    "ios-kimi-ai-implementation",
+    "ios-privacy-implementation",
+    "ios-compliance-acceptance"
+  ],
+  "source_lineage": {
+    "product_goal_bundle_sha256": "e889bfdfc1d43b7daebd7b78fbf4378f35ca8658063ebeb197752b31a4125df3",
+    "package_goal_map_source_sha256": "e889bfdfc1d43b7daebd7b78fbf4378f35ca8658063ebeb197752b31a4125df3",
+    "design_policy_source_sha256": "e889bfdfc1d43b7daebd7b78fbf4378f35ca8658063ebeb197752b31a4125df3",
+    "acceptance_matrix_source_sha256": "e889bfdfc1d43b7daebd7b78fbf4378f35ca8658063ebeb197752b31a4125df3",
+    "matched": true
+  },
+  "simulator_runtime": {
+    "required": false,
+    "status": "SKIPPED",
+    "accepted": false,
+    "claimed_pass": false,
+    "must_not_claim_pass": true
+  },
+  "commands": {
+    "xcode_source_build": "xcodebuild -project FreshTurn.xcodeproj -scheme FreshTurn -configuration Debug -destination generic/platform=iOS CODE_SIGNING_ALLOWED=NO clean build",
+    "source_unit_tests": "swift test",
+    "source_acceptance_audit": "./scripts/verify_source_acceptance.sh"
+  },
+  "build_ios_apps_evidence_refs": [
+    "/Users/wangrenzhu/work/.appfactory-acceptance/9f5bf3e5680235fe/freshturn-run-ffa1894320797bc8835a1d18/Evidence/xcode_source_build.log",
+    "/Users/wangrenzhu/work/.appfactory-acceptance/9f5bf3e5680235fe/freshturn-run-ffa1894320797bc8835a1d18/Evidence/source_unit_tests.log"
+  ],
+  "kimi_ios_evidence_refs": [
+    "/Users/wangrenzhu/work/.appfactory-acceptance/9f5bf3e5680235fe/freshturn-run-ffa1894320797bc8835a1d18/FreshTurnApp/Services/KimiReceiptParser.swift",
+    "/Users/wangrenzhu/work/.appfactory-acceptance/9f5bf3e5680235fe/freshturn-run-ffa1894320797bc8835a1d18/Evidence/source_acceptance_audit.log"
+  ],
+  "compliance_evidence_refs": [
+    "/Users/wangrenzhu/work/.appfactory-acceptance/9f5bf3e5680235fe/freshturn-run-ffa1894320797bc8835a1d18/FreshTurnApp/Resources/Info.plist",
+    "/Users/wangrenzhu/work/.appfactory-acceptance/9f5bf3e5680235fe/freshturn-run-ffa1894320797bc8835a1d18/FreshTurnApp/Resources/PrivacyInfo.xcprivacy",
+    "/Users/wangrenzhu/work/.appfactory-acceptance/9f5bf3e5680235fe/freshturn-run-ffa1894320797bc8835a1d18/Evidence/source_acceptance_audit.log"
+  ],
+  "status": "PASS"
+}

@@ -1,0 +1,37 @@
+{
+  "schema_version": "appfactory.ultraqa_scenario_matrix.v1",
+  "run_id": "run-ffa1894320797bc8835a1d18",
+  "goal_version": 1,
+  "check_id": "ROUGH-APP-SOURCE-001",
+  "blockers": [],
+  "scenarios": [
+    {
+      "scenario_id": "normal-source-build-and-core-behavior",
+      "kind": "normal",
+      "status": "PASS",
+      "expected_signal": "Generic iOS source build succeeds and all host-runnable domain tests pass",
+      "actual_signal": "** BUILD SUCCEEDED **; Executed 5 tests, with 0 failures",
+      "matched": true,
+      "command_receipt_refs": [],
+      "evidence_refs": [
+        "/Users/wangrenzhu/work/.appfactory-acceptance/9f5bf3e5680235fe/freshturn-run-ffa1894320797bc8835a1d18/Evidence/xcode_source_build.log",
+        "/Users/wangrenzhu/work/.appfactory-acceptance/9f5bf3e5680235fe/freshturn-run-ffa1894320797bc8835a1d18/Evidence/source_unit_tests.log",
+        "/Users/wangrenzhu/work/.appfactory-acceptance/9f5bf3e5680235fe/freshturn-run-ffa1894320797bc8835a1d18/Evidence/FreshTurn-source.zip"
+      ]
+    },
+    {
+      "scenario_id": "adversarial-privacy-offline-and-no-simulator-claims",
+      "kind": "adversarial",
+      "status": "PASS",
+      "expected_signal": "No embedded Kimi secret or Simulator command; redaction, explicit consent, manual recovery, permissions, and no-save-before-confirmation contracts are source-verifiable",
+      "actual_signal": "SOURCE_ACCEPTANCE_AUDIT_PASS; receipt redaction unit test passed",
+      "matched": true,
+      "command_receipt_refs": [],
+      "evidence_refs": [
+        "/Users/wangrenzhu/work/.appfactory-acceptance/9f5bf3e5680235fe/freshturn-run-ffa1894320797bc8835a1d18/Evidence/source_acceptance_audit.log",
+        "/Users/wangrenzhu/work/.appfactory-acceptance/9f5bf3e5680235fe/freshturn-run-ffa1894320797bc8835a1d18/Evidence/source_unit_tests.log"
+      ]
+    }
+  ]
+}
+
